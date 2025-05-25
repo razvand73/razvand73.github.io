@@ -7,40 +7,47 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>AI-Based Honeypots</h1>
-    <p class="subtitle">Bachelor's Thesis by Your Name</p>
+  <header class="hero">
+    <div class="container">
+      <h1>AI-Based Honeypots</h1>
+      <p class="subtitle">Bachelor's Thesis by Your Name</p>
+    </div>
   </header>
 
-  <main>
+  <main class="container">
     <section>
-      <h2>About the Project</h2>
-      <p>This project explores how Artificial Intelligence can enhance honeypots for better threat detection, deception, and response in cybersecurity.</p>
+      <h2>Introduction</h2>
+      <p>Cybersecurity threats are becoming increasingly sophisticated, making traditional defense mechanisms less effective. Honeypots offer a proactive approach by acting as decoys that lure attackers, but conventional honeypots can be static and easy to identify. This project investigates the use of Artificial Intelligence to enhance honeypots, making them more dynamic, adaptive, and efficient in gathering threat intelligence.</p>
     </section>
 
     <section>
-      <h2>Problem Statement</h2>
-      <p>Traditional honeypots are static and easy to detect. AI can make them adaptive, smarter, and more effective against evolving threats.</p>
+      <h2>How Honeypots Work</h2>
+      <p>Honeypots are systems deliberately designed to appear vulnerable and attractive to attackers. Once an attacker interacts with the honeypot, their behavior can be monitored, analyzed, and used to improve defenses. These systems do not host real services or data, making any interaction suspicious by default. Honeypots are typically deployed in networks to detect unauthorized access, study attack patterns, and collect forensic data without compromising real systems.</p>
     </section>
 
     <section>
-      <h2>Proposed Solution</h2>
-      <p>We use machine learning models to analyze attack patterns and dynamically adjust honeypot behavior, improving realism and effectiveness.</p>
+      <h2>Why Integrate AI?</h2>
+      <p>Artificial Intelligence can significantly improve honeypots by enabling them to learn from attack patterns and adapt their behavior in real time. Instead of using static configurations, AI-based honeypots can dynamically modify their surface (e.g., open ports, banners, OS fingerprints) based on observed attacker behavior. AI algorithms can also process large volumes of collected data to identify previously unknown threats, perform anomaly detection, and automate responses.</p>
     </section>
 
     <section>
-      <h2>Future Work</h2>
-      <p>Integrating AI-based honeypots into large-scale SOC environments and combining them with threat intel feeds and behavioral analysis.</p>
+      <h2>Benefits of AI-Based Honeypots</h2>
+      <ul>
+        <li><strong>Adaptive deception:</strong> Change behavior to stay undetected.</li>
+        <li><strong>Improved threat intelligence:</strong> Identify new tactics, techniques, and procedures (TTPs).</li>
+        <li><strong>Automated analysis:</strong> Use machine learning to sort real threats from noise.</li>
+        <li><strong>Reduced false positives:</strong> Improve the quality of detection and response.</li>
+      </ul>
     </section>
 
     <section>
-      <h2>Download</h2>
-      <a class="button" href="pitch-deck.pdf" download>Download Pitch Deck (PDF)</a>
+      <h2>Conclusion</h2>
+      <p>Integrating AI into honeypot technology has the potential to revolutionize proactive cybersecurity. This research explores how dynamic, learning-based systems can be leveraged not only to detect threats but to understand attacker behavior in depth. AI-based honeypots can serve as intelligent, evolving shields that contribute to a more resilient security posture.</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Your Name | University Name</p>
+    <p>© 2025 Your Name — Bachelor's Thesis</p>
   </footer>
 </body>
 </html>
