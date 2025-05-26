@@ -6,18 +6,54 @@
   <title>Honeypots bazate pe Inteligență Artificială</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
+    /* Stiluri generale */
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f5f7fa;
       color: #333;
+      scroll-behavior: smooth;
     }
 
+    /* Navigație */
+    nav {
+      position: fixed;
+      width: 100%;
+      background-color: #1d3557;
+      color: white;
+      padding: 1rem;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Antet */
     header {
       background-color: #1d3557;
       color: white;
-      padding: 2rem;
+      padding: 6rem 2rem 2rem 2rem;
       text-align: center;
     }
 
@@ -30,19 +66,27 @@
       font-size: 1.2rem;
     }
 
+    /* Secțiuni */
     section {
-      padding: 2rem;
+      padding: 4rem 2rem;
       max-width: 900px;
       margin: auto;
     }
 
     h2 {
       color: #1d3557;
+      margin-top: 2rem;
     }
 
+    ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+
+    /* Container imagine */
     .image-container {
       text-align: center;
-      margin: 30px 0;
+      margin: 2rem 0;
     }
 
     .image-container img {
@@ -56,57 +100,95 @@
     .caption {
       font-size: 0.9rem;
       color: #555;
-      margin-top: 8px;
+      margin-top: 0.5rem;
     }
 
+    /* Subsol */
     footer {
       background-color: #1d3557;
       color: white;
       text-align: center;
-      padding: 1rem;
+      padding: 2rem 1rem;
       margin-top: 3rem;
     }
 
+    /* Responsive */
     @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav ul li {
+        margin: 0.5rem 0;
+      }
+
       header h1 {
         font-size: 2rem;
       }
 
       section {
-        padding: 1rem;
+        padding: 2rem 1rem;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- Navigație -->
+  <nav>
+    <ul>
+      <li><a href="#introducere">Introducere</a></li>
+      <li><a href="#honeypot">Ce este un Honeypot</a></li>
+      <li><a href="#clasificare">Clasificare</a></li>
+      <li><a href="#ai">Integrarea AI</a></li>
+      <li><a href="#studii">Studii de Caz</a></li>
+      <li><a href="#tehnologii">Tehnologii</a></li>
+      <li><a href="#concluzii">Concluzii</a></li>
+    </ul>
+  </nav>
+
+  <!-- Antet -->
   <header>
     <h1>Honeypots bazate pe Inteligență Artificială</h1>
-    <p>Proiect de licență – Prezentare temă</p>
+    <p>O abordare modernă pentru detectarea și analiza atacurilor cibernetice</p>
   </header>
 
-  <section>
+  <!-- Introducere -->
+  <section id="introducere">
     <h2>Introducere</h2>
     <p>Într-un peisaj digital tot mai complex, organizațiile au nevoie de metode avansate pentru detectarea și prevenirea atacurilor cibernetice. Honeypots-urile sunt capcane digitale concepute să atragă atacatori, oferind în același timp cercetătorilor date valoroase despre tehnicile utilizate de aceștia. Prin integrarea Inteligenței Artificiale, honeypots-urile devin mai eficiente, adaptive și capabile să analizeze atacurile în timp real.</p>
   </section>
 
-  <section>
-    <h2>Cum funcționează Honeypots</h2>
-    <p>Honeypots sunt sisteme izolate sau simulate care imită infrastructuri IT reale pentru a atrage și monitoriza activități malițioase. Ele colectează date despre atacatori fără a pune în pericol sistemele reale. Tipurile de honeypots includ:</p>
+  <!-- Ce este un Honeypot -->
+  <section id="honeypot">
+    <h2>Ce este un Honeypot?</h2>
+    <p>Un honeypot este un sistem informatic configurat pentru a simula vulnerabilități și a atrage atacatori. Scopul său este de a detecta, analiza și înțelege comportamentul atacatorilor fără a pune în pericol infrastructura reală.</p>
     <ul>
       <li><strong>Low-interaction:</strong> Simulează servicii de bază, ușor de configurat.</li>
       <li><strong>High-interaction:</strong> Emulează sisteme reale, oferind date detaliate despre atac.</li>
       <li><strong>Research vs Production:</strong> Folosite pentru cercetare academică sau în rețele active.</li>
     </ul>
-
     <div class="image-container">
       <img src="honeypot-scheme.jpg" alt="Schemă Honeypot">
       <p class="caption">Figura: Schemă simplificată a unui Honeypot într-o rețea.</p>
     </div>
   </section>
 
-  <section>
-    <h2>Rolul Inteligenței Artificiale</h2>
+  <!-- Clasificare și Tipuri -->
+  <section id="clasificare">
+    <h2>Clasificare și Tipuri de Honeypots</h2>
+    <p>Honeypots-urile pot fi clasificate în funcție de nivelul de interacțiune și scopul lor:</p>
+    <ul>
+      <li><strong>Low-interaction:</strong> Simulează servicii de bază, ușor de configurat.</li>
+      <li><strong>High-interaction:</strong> Emulează sisteme reale, oferind date detaliate despre atac.</li>
+      <li><strong>Research:</strong> Folosite pentru cercetare academică și înțelegerea comportamentului atacatorilor.</li>
+      <li><strong>Production:</strong> Implementate în rețele active pentru detectarea și prevenirea atacurilor.</li>
+    </ul>
+  </section>
+
+  <!-- Integrarea Inteligenței Artificiale -->
+  <section id="ai">
+    <h2>Integrarea Inteligenței Artificiale</h2>
     <p>Inteligența Artificială permite honeypot-urilor să:</p>
     <ul>
       <li>Detecteze modele de atac în timp real prin machine learning.</li>
@@ -114,17 +196,29 @@
       <li>Clasifice automat comportamentele suspecte.</li>
       <li>Genereze alerte inteligente și corelate în funcție de context.</li>
     </ul>
-    <p>Prin antrenarea pe seturi mari de date de securitate, modelele AI pot distinge între trafic benign și activități malițioase, reducând ratele de alerte false.</p>
+    <p>Proiecte precum <a href="https://www.splunk.com/en_us/blog/security/deceive-ai-honeypot-concept.html" target="_blank">DECEIVE</a> demonstrează cum AI poate fi integrată în honeypots pentru a crea medii realiste și a analiza comportamentul atacatorilor în mod automat.</p>
   </section>
 
-  <section>
-    <h2>Concluzie</h2>
-    <p>Honeypots-urile bazate pe Inteligență Artificială reprezintă o soluție modernă și eficientă pentru analiza comportamentului atacatorilor și îmbunătățirea protecției cibernetice. Prin colectarea inteligentă a datelor și reacții adaptive, aceste sisteme contribuie la înțelegerea amenințărilor și întărirea apărării organizaționale.</p>
+  <!-- Studii de Caz -->
+  <section id="studii">
+    <h2>Studii de Caz</h2>
+    <p>Implementarea honeypots-urilor bazate pe AI a dus la rezultate semnificative în diverse organizații:</p>
+    <ul>
+      <li><strong>DECEIVE:</strong> Un honeypot open-source care utilizează AI pentru a simula un server Linux autentic și a analiza comportamentul atacatorilor.</li>
+      <li><strong>AI Sweden:</strong> Proiect care folosește AI pentru a îmbunătăți poziționarea și realismul honeypots-urilor, maximizând colectarea de informații despre amenințări.</li>
+      <li><strong>LLM Agent Honeypot:</strong> Proiect care monitorizează și analizează agenți AI autonomi care efectuează atacuri în lumea reală.</li>
+    </ul>
   </section>
 
-  <footer>
-    &copy; 2025 Proiect de licență – AI & Cybersecurity | Student: Numele Tău
-  </footer>
-
-</body>
-</html>
+  <!-- Tehnologii folosite -->
+  <section id="tehnologii">
+    <h2>Tehnologii Folosite</h2>
+    <p>Implementarea honeypots-urilor bazate pe AI implică utilizarea unor tehnologii și instrumente variate:</p>
+    <ul>
+      <li><strong>Machine Learning:</strong> Algoritmi pentru detectarea și clasificarea comportamentelor suspecte.</li>
+      <li><strong>Procesarea Limbajului Natural:</strong> Pentru a analiza comenzile și interacțiunile atacatorilor.</li>
+      <li><strong>Automatizare:</strong> Scripturi și instrumente pentru configurarea și gestionarea honeypots-urilor.</li>
+      <li><strong>Vizualizare:</strong> Dashboard-uri pentru monitorizarea și analiza datelor colectate.</li>
+    </ul
+::contentReference[oaicite:0]{index=0}
+ 
