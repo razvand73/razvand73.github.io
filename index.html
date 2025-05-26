@@ -1,59 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI-Based Honeypots</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Honeypots bazate pe Inteligență Artificială</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background-color: #1d3557;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #1d3557;
+    }
+
+    .image-container {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .image-container img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .caption {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 8px;
+    }
+
+    footer {
+      background-color: #1d3557;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="container">
-      <h1>AI-Based Honeypots</h1>
-    </div>
+
+  <header>
+    <h1>Honeypots bazate pe Inteligență Artificială</h1>
+    <p>Proiect de licență – Prezentare temă</p>
   </header>
 
-  <main class="container">
-    <section>
-      <h2>Introduction</h2>
-      <p>Cybersecurity threats are becoming increasingly sophisticated, making traditional defense mechanisms less effective. Honeypots offer a proactive approach by acting as decoys that lure attackers, but conventional honeypots can be static and easy to identify. This project investigates the use of Artificial Intelligence to enhance honeypots, making them more dynamic, adaptive, and efficient in gathering threat intelligence.</p>
-    </section>
+  <section>
+    <h2>Introducere</h2>
+    <p>Într-un peisaj digital tot mai complex, organizațiile au nevoie de metode avansate pentru detectarea și prevenirea atacurilor cibernetice. Honeypots-urile sunt capcane digitale concepute să atragă atacatori, oferind în același timp cercetătorilor date valoroase despre tehnicile utilizate de aceștia. Prin integrarea Inteligenței Artificiale, honeypots-urile devin mai eficiente, adaptive și capabile să analizeze atacurile în timp real.</p>
+  </section>
 
-    <section id="how-it-works">
-  <h2>Cum funcționează Honeypots</h2>
-  <p>Honeypots sunt sisteme-capcană menite să atragă atacatorii informatici pentru a monitoriza și înregistra comportamente malițioase. Ele sunt separate de infrastructura reală pentru a preveni accesul neautorizat real și pot simula diverse servicii, sisteme de operare sau aplicații.</p>
+  <section>
+    <h2>Cum funcționează Honeypots</h2>
+    <p>Honeypots sunt sisteme izolate sau simulate care imită infrastructuri IT reale pentru a atrage și monitoriza activități malițioase. Ele colectează date despre atacatori fără a pune în pericol sistemele reale. Tipurile de honeypots includ:</p>
+    <ul>
+      <li><strong>Low-interaction:</strong> Simulează servicii de bază, ușor de configurat.</li>
+      <li><strong>High-interaction:</strong> Emulează sisteme reale, oferind date detaliate despre atac.</li>
+      <li><strong>Research vs Production:</strong> Folosite pentru cercetare academică sau în rețele active.</li>
+    </ul>
 
-  <!-- Imaginea adăugată -->
-  <div class="image-container">
-    <img src="honeypot-scheme.jpg" alt="Schemă Honeypot">
-    <p class="caption">Figura: Schemă simplificată a unui Honeypot într-o rețea.</p>
-  </div>
-</section>
+    <div class="image-container">
+      <img src="honeypot-scheme.jpg" alt="Schemă Honeypot">
+      <p class="caption">Figura: Schemă simplificată a unui Honeypot într-o rețea.</p>
+    </div>
+  </section>
 
+  <section>
+    <h2>Rolul Inteligenței Artificiale</h2>
+    <p>Inteligența Artificială permite honeypot-urilor să:</p>
+    <ul>
+      <li>Detecteze modele de atac în timp real prin machine learning.</li>
+      <li>Se adapteze automat pentru a păcăli atacatorii.</li>
+      <li>Clasifice automat comportamentele suspecte.</li>
+      <li>Genereze alerte inteligente și corelate în funcție de context.</li>
+    </ul>
+    <p>Prin antrenarea pe seturi mari de date de securitate, modelele AI pot distinge între trafic benign și activități malițioase, reducând ratele de alerte false.</p>
+  </section>
 
-    <section>
-      <h2>Why Integrate AI?</h2>
-      <p>Artificial Intelligence can significantly improve honeypots by enabling them to learn from attack patterns and adapt their behavior in real time. Instead of using static configurations, AI-based honeypots can dynamically modify their surface (e.g., open ports, banners, OS fingerprints) based on observed attacker behavior. AI algorithms can also process large volumes of collected data to identify previously unknown threats, perform anomaly detection, and automate responses.</p>
-    </section>
-
-    <section>
-      <h2>Benefits of AI-Based Honeypots</h2>
-      <ul>
-        <li><strong>Adaptive deception:</strong> Change behavior to stay undetected.</li>
-        <li><strong>Improved threat intelligence:</strong> Identify new tactics, techniques, and procedures (TTPs).</li>
-        <li><strong>Automated analysis:</strong> Use machine learning to sort real threats from noise.</li>
-        <li><strong>Reduced false positives:</strong> Improve the quality of detection and response.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Conclusion</h2>
-      <p>Integrating AI into honeypot technology has the potential to revolutionize proactive cybersecurity. This research explores how dynamic, learning-based systems can be leveraged not only to detect threats but to understand attacker behavior in depth. AI-based honeypots can serve as intelligent, evolving shields that contribute to a more resilient security posture.</p>
-    </section>
-  </main>
+  <section>
+    <h2>Concluzie</h2>
+    <p>Honeypots-urile bazate pe Inteligență Artificială reprezintă o soluție modernă și eficientă pentru analiza comportamentului atacatorilor și îmbunătățirea protecției cibernetice. Prin colectarea inteligentă a datelor și reacții adaptive, aceste sisteme contribuie la înțelegerea amenințărilor și întărirea apărării organizaționale.</p>
+  </section>
 
   <footer>
-    <p>© 2025 Your Name — Bachelor's Thesis</p>
+    &copy; 2025 Proiect de licență – AI & Cybersecurity | Student: Numele Tău
   </footer>
+
 </body>
 </html>
